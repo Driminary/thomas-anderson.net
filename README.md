@@ -1,2 +1,3 @@
-# thomas-anderson.net
-Website Code
+# Website code for thomas-anderson.net
+
+This repository contains the code for thomas-anderson.net. 

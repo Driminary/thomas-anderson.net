@@ -22,5 +22,4 @@ rev = os.environ.get('K_REVISION', 'No revision')
 # Root
 @site.route('/')
 def main():
-#    return jsonify(revision=rev, environment=env)
     return render_template('index.html')

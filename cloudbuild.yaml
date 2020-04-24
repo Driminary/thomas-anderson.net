@@ -7,4 +7,4 @@ steps:
   args: ['push', 'eu.gcr.io/$PROJECT_ID/ta-net:$_APPENV']
   # Deploy container image to Cloud Run development service
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'ta-net-$_APPENV', '--allow-unauthenticated', '--image', 'eu.gcr.io/$PROJECT_ID/ta-net:$_APPENV', '--region', 'europe-west-1', '--platform', 'managed', '--revision-suffix', '$COMMIT_SHA', '--set-env-vars', 'appenv=$_APPENV']
+  args: ['run', 'deploy', 'ta-net-$_APPENV', '--allow-unauthenticated', '--image', 'eu.gcr.io/$PROJECT_ID/ta-net:$_APPENV', '--region', 'europe-west1', '--platform', 'managed', '--revision-suffix', '$COMMIT_SHA', '--set-env-vars', 'appenv=$_APPENV']

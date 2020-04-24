@@ -11,4 +11,8 @@ pip install Flask gunicorn google-api-python-client
 gunicorn -e appenv='Local Testing' --bind :8080 --workers 1 --threads 8 core:site
 ```
 
-To build:
+Upload "assets" folder to GCS:
+
+```bash
+gsutil -m cp -r assets/* gs://anderson-an9302-assets/
+```

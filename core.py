@@ -11,9 +11,9 @@ from googleapiclient.discovery import build
 # Define the Flask app name from the filename
 site = Flask(__name__)
 
-# Get environment, and default to Development
+# Get environment, and default to Local
 env = os.environ.get('appenv', 'Local')
-rev = os.environ.get('K_REVISION', 'No revision')
+rev = os.environ.get('K_REVISION', 'Local')
 
 ################
 # Begin Routes #

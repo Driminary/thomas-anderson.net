@@ -22,9 +22,9 @@ rev = os.environ.get('K_REVISION', 'No revision')
 # Root
 @site.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', env=env, rev=rev)
 
 # About
 @site.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', env=env, rev=rev)

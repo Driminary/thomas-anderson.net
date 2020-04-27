@@ -11,10 +11,16 @@ pip install Flask gunicorn google-api-python-client
 gunicorn -e appenv='Local Testing' --bind :8080 --workers 1 --threads 8 core:site
 ```
 
-Upload "assets" folder to GCS (assumng '$GOOGLE_CLOUD_PROJECT-assets' was used as GCS bucket name):
+Upload "assets" folder to GCS (assuming '$GOOGLE_CLOUD_PROJECT-assets' exists):
 
 ```bash
 gsutil -m cp -r assets/* gs://$GOOGLE_CLOUD_PROJECT-assets/
+```
+
+Set CORS on the bucket properly:
+
+```
+gsutil cors set assets/cors.json gs://$GOOGLE_CLOUD_PROJECT-assets
 ```
 
 To build locally:

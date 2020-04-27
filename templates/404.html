@@ -1,0 +1,24 @@
+{% extends "_base.html" %}
+
+{% block title %}Error - 404!{% endblock %}
+
+{% block content %}
+<header class="bg-danger py-5 mt-5 mb-5">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 col-sm-7">
+                <h1 class="display-4 text-white mt-5 mb-2">404 Not Found!</h1>
+                <hr />
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-5">
+            <h2><i class="fas fa-alert mr-2"></i>Error - page not found! Try going <a href="{{ url_for('home') }}">home</a>.</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}

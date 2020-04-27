@@ -22,9 +22,20 @@ rev = os.environ.get('K_REVISION', 'Local')
 # Root
 @site.route('/')
 def home():
-    return render_template('home.html', env=env, rev=rev)
+    return render_template('home.html', rev=rev)
 
 # About
 @site.route('/about')
 def about():
-    return render_template('about.html', env=env, rev=rev)
+    return render_template('about.html', rev=rev)
+
+# About
+@site.route('/broadband')
+def broadband():
+    return render_template('broadband.html', rev=rev)
+
+# 404
+@site.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404

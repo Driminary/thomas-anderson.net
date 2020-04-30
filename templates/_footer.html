@@ -15,8 +15,12 @@
         </div>
     </div>
     
-    <!-- Revision Details -->
-    <p class="m-0 text-left text-muted small">{{ rev }}</p>
+    <div class="row m-0 text-muted small justify-content-between">
+        <!-- Revision Details -->
+        <div class="col-6 p-0 text-left">{{ rev }}</div>
+        <!-- Terms of Service and Privacy Policy -->
+        <div class="col-6 text-right"><a class="text-muted" href="{{ url_for('terms') }}">Terms of Service</a> | <a class="text-muted" href="{{ url_for('privacy') }}">Privacy Policy</a></div>
+    </div>
 </footer>
 
 <!-- Bootstrap core JavaScript -->

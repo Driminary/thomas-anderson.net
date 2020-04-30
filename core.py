@@ -29,10 +29,20 @@ def home():
 def about():
     return render_template('about.html', rev=rev)
 
-# About
+# Broadband
 @site.route('/broadband')
 def broadband():
     return render_template('broadband.html', rev=rev)
+
+# Privacy Policy
+@site.route('/privacy')
+def privacy():
+    return render_template('privacy.html', rev=rev)
+
+# Terms of Service
+@site.route('/terms')
+def terms():
+    return render_template('terms.html', rev=rev)
 
 # 404
 @site.errorhandler(404)

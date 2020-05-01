@@ -17,8 +17,15 @@ var appStart = function() {
             client_id: '654558835136-q9cqi3n4phvojlf93oqo2q08gtlt38hd.apps.googleusercontent.com'
         });
 
-        // Attach the click handler to the sign-in button
-        auth2.attachClickHandler('gsignin', {}, onSuccess, onFailure);
+        gapi.signin2.render('gsignin', {
+        'scope': 'profile email openid',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+        });
 
         // Listen for user changes.
         auth2.currentUser.listen(onSuccess);
@@ -35,12 +42,15 @@ var onSuccess = function(user) {
         userdetails = user;
         $("#gsignin").addClass("d-none");
         $("#gsignout").removeClass("d-none");
-        $("#gsignedin").text('Signed in as: ' + user.getBasicProfile().getName()).removeClass("d-none");
+        $("#gsignedin")
+            .text('Signed In:')
+            .append('<br />' + user.getBasicProfile().getName())
+            .append('<br />' + user.getBasicProfile().getEmail());
     } else { // Catch not signed in.
         console.log('Not signed in.')
         $("#gsignin").removeClass("d-none");
         $("#gsignout").addClass("d-none");
-        $("#gsignedin").text("").addClass("d-none");
+        $("#gsignedin").text("Not Signed In");
     }
  };
 
@@ -50,3 +60,12 @@ var onSuccess = function(user) {
 var onFailure = function(error) {
     console.log(error);
 };
+
+/**
+ * Handle Sign-Out.
+ */
+var signOut = function() {
+    auth2.signOut().then(function () {
+        console.log('User signed out.');
+    });
+}

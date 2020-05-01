@@ -88,6 +88,17 @@ def getcookie():
     return '<h1>Token: ' + tkn + '</h1>'
 
 
+@site.route('/logout')
+def logout():
+
+    if not request.cookies.get('session'):
+        return jsonify({'status': 'not required'}) # Return if no cookie present
+
+    response = jsonify({'status': 'success'})
+    response.set_cookie('session', '', expires=0)
+    return response
+
+
 # 404
 @site.errorhandler(404)
 def page_not_found(e):

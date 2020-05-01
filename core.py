@@ -8,6 +8,8 @@ from flask import Flask, request, jsonify, abort, render_template
 # Import Google API Client
 from googleapiclient.discovery import build
 
+from google.oauth2 import id_token
+
 # Define the Flask app name from the filename
 site = Flask(__name__)
 
@@ -43,6 +45,42 @@ def privacy():
 @site.route('/terms')
 def terms():
     return render_template('terms.html', rev=rev)
+
+# Authorisation
+@site.route('/auth', methods=['POST'])
+def auth():
+
+    # Protect from CSRF
+    if not request.headers.get('X-Requested-With'):
+        abort(403)
+
+    token = request.json['token']
+
+    try:
+
+        # Verifies aud, exp + JWT signature:
+        idinfo = id_token.verify_oauth2_token(token, request, '654558835136-q9cqi3n4phvojlf93oqo2q08gtlt38hd.apps.googleusercontent.com')
+
+        if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
+            raise ValueError
+
+        # ID token is valid. Set the session cookie to match the token expiry.
+        response = jsonify({'status': 'success'})
+        response.set_cookie('session', token, expires=idinfo['exp'], httponly=True, secure=True)
+
+        return response
+
+    except ValueError:
+        # Invalid token
+        abort(401, 'Invalid token')
+
+
+@site.route('/getcookie')
+def getcookie():
+
+    tkn = request.cookies.get('session')
+    return '<h1>Token: ' + tkn + '</h1>'
+
 
 # 404
 @site.errorhandler(404)

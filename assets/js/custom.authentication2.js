@@ -80,7 +80,13 @@ var onFailure = function(error) {
  */
 var signOut = function() {
     auth2.signOut().then(function () {
-        
+        $.ajax({
+            type: "GET",
+            url: "/logout",
+            success: function( data ) {
+                alert( "Cookie removed!, response: " + data );
+            }
+        });
         console.log('User signed out.');
     });
 }

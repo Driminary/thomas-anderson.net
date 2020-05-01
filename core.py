@@ -36,6 +36,9 @@ def about():
 # Broadband
 @site.route('/broadband')
 def broadband():
+    if not request.cookies.get('session'):
+        # Not logged in
+        return abort(401, "Please log in.")
     return render_template('broadband.html', rev=rev)
 
 # Privacy Policy
@@ -81,13 +84,6 @@ def auth():
         abort(401, 'Invalid token')
 
 
-@site.route('/getcookie')
-def getcookie():
-
-    tkn = request.cookies.get('session')
-    return '<h1>Token: ' + tkn + '</h1>'
-
-
 @site.route('/logout')
 def logout():
 
@@ -102,5 +98,5 @@ def logout():
 # 404
 @site.errorhandler(404)
 def page_not_found(e):
-    # note that we set the 404 status explicitly
+    # Set the 404 status explicitly
     return render_template('404.html'), 404

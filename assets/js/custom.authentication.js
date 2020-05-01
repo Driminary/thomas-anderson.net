@@ -29,7 +29,7 @@ var initSigninV2 = function() {
   if (auth2.isSignedIn.get() == true) {
     auth2.signIn();
   } else {
-    auth2.attachClickHandler($('gsignin'), {},
+    auth2.attachClickHandler($('#gsignin'), {},
         function(googleUser) {
             console.log('Successful sign in');
         },

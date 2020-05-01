@@ -52,6 +52,10 @@ def terms():
 @site.route('/auth', methods=['POST'])
 def auth():
 
+    if request.cookies.get('session')
+        # Session exists
+        return
+
     # Protect from CSRF
     if not request.headers.get('X-Requested-With'):
         abort(403)

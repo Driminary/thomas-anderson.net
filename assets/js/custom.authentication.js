@@ -19,14 +19,15 @@ var appStart = function() {
 
         gapi.signin2.render('gsignin', {
         'scope': 'profile email openid',
-        'longtitle': true,
+        'longtitle': false,
+        'width': 90,
         'theme': 'dark',
         'onsuccess': onSuccess,
         'onfailure': onFailure
         });
 
         // Listen for user changes.
-         // auth2.currentUser.listen(onSuccess);
+        auth2.currentUser.listen(onSuccess);
 
     });
 };
@@ -38,7 +39,7 @@ var onSuccess = function(user) {
     if (auth2.isSignedIn.get()) {
         console.log('Signed in as ' + user.getBasicProfile().getName());
         userdetails = user;
-        $("#gsignin").addClass("d-none");
+        $("#gsignin").addClass("d-none").removeClass("d-flex justify-items-center");
         $("#gsignout").removeClass("d-none");
         $("#gsignedin")
             .text('Signed In:')
@@ -46,7 +47,7 @@ var onSuccess = function(user) {
             .append('<br />' + user.getBasicProfile().getEmail());
     } else { // Catch not signed in.
         console.log('Not signed in.')
-        $("#gsignin").removeClass("d-none");
+        $("#gsignin").removeClass("d-none").addClass("d-flex justify-items-center");
         $("#gsignout").addClass("d-none");
         $("#gsignedin").text("Not Signed In");
     }

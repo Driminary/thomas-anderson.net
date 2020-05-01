@@ -33,12 +33,12 @@ var onSuccess = function(user) {
     if (auth2.isSignedIn.get()) {
         console.log('Signed in as ' + user.getBasicProfile().getName());
         userdetails = user;
-        $("#gbutton").hide();
-        $("#gsignin").text('Signed in as: ' + user.getBasicProfile().getName());
+        $("#gsignin").addclass("d-none");
+        $("#gsignedin").text('Signed in as: ' + user.getBasicProfile().getName()).removeClass("d-none");
     } else { // Catch not signed in.
         console.log('Not signed in.')
-        $("#gbutton").show();
-        $("#gsignin").text("");
+        $("#gsignin").removeClass("d-none");
+        $("#gsignedin").text("").addclass("d-none");
     }
  };
 

@@ -8,7 +8,9 @@ from flask import Flask, request, jsonify, abort, render_template
 # Import Google API Client
 from googleapiclient.discovery import build
 
+# Import Google Auth
 from google.oauth2 import id_token
+from google.auth.transport import requests
 
 # Define the Flask app name from the filename
 site = Flask(__name__)
@@ -59,7 +61,7 @@ def auth():
     try:
 
         # Verifies aud, exp + JWT signature:
-        idinfo = id_token.verify_oauth2_token(token, request, '654558835136-q9cqi3n4phvojlf93oqo2q08gtlt38hd.apps.googleusercontent.com')
+        idinfo = id_token.verify_oauth2_token(token, requests.Request(), '654558835136-q9cqi3n4phvojlf93oqo2q08gtlt38hd.apps.googleusercontent.com')
 
         if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
             raise ValueError

@@ -49,7 +49,7 @@ var onSuccess = function(user) {
         // Set state
         var id_token = user.getAuthResponse().id_token;
 
-        $.post( "/auth", { token: id_token } )
+        $.post( "/auth", { token: id_token })
         .done(function( data ) {
             alert( "Cookie set, response: " + data );
         });

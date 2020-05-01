@@ -14,8 +14,17 @@
                 <a class="nav-link" href="{{ url_for('about') }}">About</a>
             </li>
             <li class="nav-item d-flex align-items-center">
-                <div id="gsignin"><button id="gbutton" type="button" style="font-family: 'Roboto'" class="nav-link btn btn-sm btn-light text-secondary ml-2 py-1 pl-1"><i class="fab fa-fw fa-google mr-1 text-secondary"></i>Sign In</button></div>
-                <div id="gsignedin" class="d-none navbar-text"></div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div id="gsignedin" class="dropdown-item">Not Signed In</div>
+                    <div class="dropdown-divider"></div>
+                    <div id="gsignin" class="dropdown-item"><button id="gbutton" type="button" style="font-family: 'Roboto'" class="nav-link btn btn-sm btn-light text-secondary ml-2 py-1 pl-1"><i class="fab fa-fw fa-google mr-1 text-secondary"></i>Sign In</button></div>           
+                    <div id="gsignout" class="dropdown-item d-none"><a href="#">Sign Out</a></div>
+                </div>
             </li>
         </ul>
         </div>

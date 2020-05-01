@@ -34,10 +34,12 @@ var onSuccess = function(user) {
         console.log('Signed in as ' + user.getBasicProfile().getName());
         userdetails = user;
         $("#gsignin").addClass("d-none");
+        $("#gsignout").removeClass("d-none");
         $("#gsignedin").text('Signed in as: ' + user.getBasicProfile().getName()).removeClass("d-none");
     } else { // Catch not signed in.
         console.log('Not signed in.')
         $("#gsignin").removeClass("d-none");
+        $("#gsignout").addClass("d-none");
         $("#gsignedin").text("").addClass("d-none");
     }
  };

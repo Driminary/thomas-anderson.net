@@ -19,8 +19,6 @@ var appStart = function() {
 
         gapi.signin2.render('gsignin', {
         'scope': 'profile email openid',
-        'width': 240,
-        'height': 50,
         'longtitle': true,
         'theme': 'dark',
         'onsuccess': onSuccess,
@@ -28,7 +26,7 @@ var appStart = function() {
         });
 
         // Listen for user changes.
-        auth2.currentUser.listen(onSuccess);
+         // auth2.currentUser.listen(onSuccess);
 
     });
 };

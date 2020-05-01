@@ -38,7 +38,7 @@ def about():
 def broadband():
     if not request.cookies.get('session'):
         # Not logged in
-        return abort(401, "Please log in.")
+        abort(401, "Please log in.")
     return render_template('broadband.html', rev=rev)
 
 # Privacy Policy

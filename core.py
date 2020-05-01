@@ -52,7 +52,7 @@ def terms():
 @site.route('/auth', methods=['POST'])
 def auth():
 
-    if request.cookies.get('session')
+    if request.cookies.get('session'):
         # Session exists
         return
 

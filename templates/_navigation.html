@@ -13,8 +13,8 @@
             <li class="nav-item {% if 'About' == active_page %} active{% endif %}">
                 <a class="nav-link" href="{{ url_for('about') }}">About</a>
             </li>
-            <li class="nav-item">
-                <div id="gsignin"><a class="nav-link" href="#">Sign-In</a></div>
+            <li class="nav-item d-flex align-items-center">
+                <div id="gsignin"><button id="gbutton" type="button" style="font-family: 'Roboto'" class="nav-link btn btn-sm btn-light text-secondary ml-2 py-1 pl-1"><i class="fab fa-fw fa-google mr-1 text-secondary"></i>Sign In</button></div>
             </li>
         </ul>
         </div>

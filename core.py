@@ -71,10 +71,10 @@ def auth():
 
         if request.cookies.get('session'):
             # ID token is valid and cookie already set.
-            response = jsonify({'status': 'token valid'})
+            response = jsonify({'status': 'Token valid, cookie exists'})
         else:
             # ID token is valid but no cookie. Set the session cookie to match the token expiry.
-            response = jsonify({'status': 'token valid + cookie added'})
+            response = jsonify({'status': 'Token valid and cookie created'})
             response.set_cookie('session', token, expires=idinfo['exp'], httponly=True, secure=True)
 
         return response

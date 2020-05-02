@@ -54,7 +54,7 @@ var onSuccess = function(user) {
             url: "/auth",
             data: JSON.stringify({ token: id_token }),
             success: function( data ) {
-                alert( "Successful call, status: " + JSON.parse(data).status );
+                console.log( "Successful call, status: " + data.status );
             },
             contentType: "application/json; charset=utf-8",
             dataType: "json"

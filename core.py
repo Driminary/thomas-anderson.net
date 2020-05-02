@@ -69,13 +69,13 @@ def auth():
         if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
             raise ValueError
 
-        # ID token is valid. Set the session cookie to match the token expiry.
-        response = jsonify({'status': 'success'})
-
-        if not request.cookies.get('session'):
+        if request.cookies.get('session'):
+            # ID token is valid and cookie already set.
+            response = jsonify({'status': 'token valid'})
+        else:
+            # ID token is valid but no cookie. Set the session cookie to match the token expiry.
+            response = jsonify({'status': 'token valid + cookie added'})
             response.set_cookie('session', token, expires=idinfo['exp'], httponly=True, secure=True)
-            # Session exists
-            return
 
         return response
 

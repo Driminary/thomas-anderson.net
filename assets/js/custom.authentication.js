@@ -26,9 +26,6 @@ var appStart = function() {
         'onfailure': onFailure
         });
 
-        // Listen for user changes.
-        auth2.currentUser.listen(onSuccess);
-
     });
 };
 
@@ -38,7 +35,6 @@ var appStart = function() {
 var onSuccess = function(user) {
     if (auth2.isSignedIn.get()) {
         console.log('Signed in as ' + user.getBasicProfile().getName());
-        userdetails = user;
         $("#gsignin").addClass("d-none").removeClass("d-flex justify-items-center");
         $("#gsignout").removeClass("d-none");
         $("#gsignedin")
@@ -59,13 +55,7 @@ var onSuccess = function(user) {
             contentType: "application/json; charset=utf-8",
             dataType: "json"
         });
-        
-    } else { // Catch not signed in.
-        console.log('Not signed in.')
-        $("#gsignin").removeClass("d-none").addClass("d-flex justify-items-center");
-        $("#gsignout").addClass("d-none");
-        $("#gsignedin").text("Not Signed In");
-    }
+    } 
  };
 
 /**
@@ -84,9 +74,12 @@ var signOut = function() {
             type: "GET",
             url: "/logout",
             success: function( data ) {
-                alert( "Cookie removed!, response: " + data );
+                console.log( "Cookie removal: " + data.status );
             }
         });
         console.log('User signed out.');
+        $("#gsignin").removeClass("d-none").addClass("d-flex justify-items-center");
+        $("#gsignout").addClass("d-none");
+        $("#gsignedin").text("Not Signed In");
     });
 }

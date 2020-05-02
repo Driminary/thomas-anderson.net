@@ -55,10 +55,6 @@ def terms():
 @site.route('/auth', methods=['POST'])
 def auth():
 
-    if request.cookies.get('session'):
-        # Session exists
-        return
-
     # Protect from CSRF
     if not request.headers.get('X-Requested-With'):
         abort(403)
@@ -75,7 +71,11 @@ def auth():
 
         # ID token is valid. Set the session cookie to match the token expiry.
         response = jsonify({'status': 'success'})
-        response.set_cookie('session', token, expires=idinfo['exp'], httponly=True, secure=True)
+
+        if not request.cookies.get('session'):
+            response.set_cookie('session', token, expires=idinfo['exp'], httponly=True, secure=True)
+            # Session exists
+            return
 
         return response
 

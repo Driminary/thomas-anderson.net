@@ -49,9 +49,15 @@ var onSuccess = function(user) {
         // Set state
         var id_token = user.getAuthResponse().id_token;
 
-        $.post( "/auth", { token: id_token })
-        .done(function( data ) {
-            alert( "Cookie set, response: " + data );
+        $.ajax({
+            type: "POST",
+            url: "/auth",
+            data: JSON.stringify({ token: id_token }),
+            success: function( data ) {
+                alert( "Cookie set, response: " + data );
+            },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json"
         });
         
     } else { // Catch not signed in.
@@ -74,6 +80,13 @@ var onFailure = function(error) {
  */
 var signOut = function() {
     auth2.signOut().then(function () {
+        $.ajax({
+            type: "GET",
+            url: "/logout",
+            success: function( data ) {
+                alert( "Cookie removed!, response: " + data );
+            }
+        });
         console.log('User signed out.');
     });
 }

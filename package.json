@@ -1,0 +1,18 @@
+{
+  "name": "apheleia",
+  "version": "0.0.1",
+  "description": "Source code for www.thomas-anderson.net",
+  "author": "Thomas Anderson",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Driminary/thomas-anderson.net.git"
+  },
+  "homepage": "https://github.com/Driminary/thomas-anderson.net#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}

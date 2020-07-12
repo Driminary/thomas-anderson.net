@@ -1,5 +1,16 @@
-# Website code for thomas-anderson.net
+# 11ty-based Thomas-Anderson.net
 
-This repository contains the code for thomas-anderson.net. 
+To install:
+```
+npm install
+```
 
-In progress rebuild.
+To build:
+```
+npx @11ty/eleventy --input=./source --output=./build
+```
+
+To serve:
+```
+npx @11ty/eleventy --input=./source --output=./build --serve
+```

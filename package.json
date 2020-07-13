@@ -3,12 +3,7 @@
   "version": "0.0.1",
   "description": "Source code for www.thomas-anderson.net",
   "author": "Thomas Anderson",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Driminary/thomas-anderson.net.git"
-  },
   "homepage": "https://github.com/Driminary/thomas-anderson.net#README",
-  "main": "index.js",
   "scripts": {
     "purge": "rm -Rf ./_build",
     "start": "npx @11ty/eleventy --serve",

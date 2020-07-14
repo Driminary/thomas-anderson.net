@@ -9,7 +9,8 @@
     "build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose",
     "build:html": "npx @11ty/eleventy",
     "build:dev": "npm run build:css && npx @11ty/eleventy",
-    "build": "PURGE=yes MINIMISE=yes npm run build:css && npx @11ty/eleventy",
+    "addsha": "echo '{\"commit\":\"'$(git rev-parse --short HEAD)'\"}' > source/_data/git.json",
+    "build": "npm run addsha && PURGE=yes MINIMISE=yes npm run build:css && npx @11ty/eleventy",
     "debug": "DEBUG=* npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve"
   },

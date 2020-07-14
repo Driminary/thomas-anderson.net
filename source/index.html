@@ -1,38 +1,46 @@
 ---
 layout: base
-title: Homepage
+title: Home
 date: 2020-01-01
 ---
 
 <!-- Start Content -->
 
-<header style="height: 100vh; min-height: 500px" class="bg-blue-700 flex items-center">
-		<div class="w-3/4 mx-auto">
-            <img alt="A photo of Tom Anderson" src="/img/mesmaller.jpg" class="float-left h-1/6" />
-            <h1>Hi.</h1>
-            <hr />
-            <p>I'm Tom Anderson, and this is my personal site. Have a look around!</p>
-            <p style="font-family: 'Indie Flower', cursive">Tom</p>
+<header style="height: 100vh; min-height: 500px" class="bg-anderson-blue grid items-center">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center w-3/4 sm:max-w-screen-lg mx-auto">
+        <div>
+            <img alt="A photo of Tom Anderson" src="/img/mesmaller.jpg" class="rounded-full border border-blue-900 object-cover mx-auto h-64" />
+		</div>
+        <div class="md:col-span-2">
+            <h1 class="text-white ml-3">Hi.</h1>
+            <hr class="border-white border-opacity-25 mb-3" />
+            <p class="text-white text-opacity-50 text-xl">I'm Tom Anderson, and this is my personal site. Have a look around!</p>
+            <p class="text-right text-white text-opacity-50 text-xl mr-5" style="font-family: 'Indie Flower', cursive">Tom</p>
+            </div>
         </div>
 </header>
 
-<div>
-    <div>
-        <div>
-            <h1>Some of my work...</h1>
-            <a href="https://github.com/Driminary"><i class="fab fa-fw fa-github fa-3x"></i></a>
-            <a href="https://googlecloudcertified.credential.net/profile/0a0997a4f8b4ce5db4ded3ad1209b1762bac02a8"><i class="fab fa-fw fa-google fa-3x"></i></a>
-            <a href="https://www.youracclaim.com/users/thomas-anderson.64196b60"><i class="fab fa-fw fa-microsoft fa-3x"></i></a>
-            <a href="https://www.linkedin.com/in/th0masanderson/"><i class="fab fa-fw fa-linkedin fa-3x"></i></a>
+<section class="bg-gray-600 border-t border-gray-500 py-10">
+<div class="text-center text-white px-4 sm:max-w-screen-xl mx-auto">
+    <h1>Some of my work...</h1>
+    <div class="inline-grid grid-cols-2 sm:grid-cols-4 my-5 gap-2">
+        <div><a class="bg-gray-800 hover:bg-gray-700 text-5xl rounded shadow pt-1"
+                href="https://github.com/Driminary"><i class="fab fa-fw fa-github"></i></a></div>
+        <div><a class="bg-white hover:bg-gray-200 text-gray-800 text-5xl rounded shadow pt-1"
+                href="https://googlecloudcertified.credential.net/profile/0a0997a4f8b4ce5db4ded3ad1209b1762bac02a8"><i class="fab fa-fw fa-google"></i></a>
         </div>
-    </div>
-    <div>
-        <div>
-            <h1>Comments? Suggestions? Queries?</h1>
-            <p>Please use the address below.</p>
-            <a href="mailto:me@thomas-anderson.net"><i class="fas fa-envelope-open-text"></i>me@thomas-anderson.net</a>
+        <div><a class="bg-white hover:bg-gray-200 text-blue-600 text-5xl rounded shadow pt-1"
+                href="https://www.youracclaim.com/users/thomas-anderson.64196b60"><i class="fab fa-fw fa-microsoft"></i></a>
         </div>
+        <div><a class="bg-blue-700 hover:bg-blue-800 text-5xl rounded shadow pt-1"
+                href="https://www.linkedin.com/in/th0masanderson/"><i class="fab fa-fw fa-linkedin"></i></a></div>
     </div>
+    <hr class="w-1/2 mx-auto my-5 shadow" />
+    <h3>Comments? Suggestions? Queries?</h1>
+    <p class="text-xl text-white text-opacity-75">Please use the address below.</p>
+    <a class="bg-gray-200 hover:bg-gray-300 font-semibold text-xl text-gray-600 rounded border border-gray-500 inline-block px-4 py-2 my-4 shadow" href="mailto:me@thomas-anderson.net"><i class="fas fa-envelope-open-text mr-2"></i>me@thomas-anderson.net</a>
 </div>
+<section>
+
 
 <!-- End Content -->

@@ -1,15 +1,5 @@
 <head>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85751744-1"></script>
-	<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-85751744-1');
-	</script>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Tom Anderson's personal website">
@@ -17,15 +7,25 @@ gtag('config', 'UA-85751744-1');
 
 	<title>Tom Anderson - {{ title }}</title>
 
-    <!-- Custom Fonts -->
+	<!-- Google Analytics - Using ga-lite (https://github.com/jehna/ga-lite) -->
+    <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+    <script>
+        var galite = galite || {};
+        galite.UA = 'UA-85751744-1';
+    </script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/37747d6ece.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="/css/bundle.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/37747d6ece.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
     <!-- Google Logo Colour Override (via https://stackoverflow.com/questions/52578726/fontawesome-5-multi-color-icon) -->
     <style>

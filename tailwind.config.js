@@ -5,8 +5,14 @@ module.exports = {
     content: ['./source/**/*.html','./source/**/*.liquid'],
   },
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+        'anderson-blue': '#07689F',
+      }
+    },
   },
-  variants: {},
+  variants: {
+      borderWidth: ['responsive', 'hover']
+  },
   plugins: [],
 }

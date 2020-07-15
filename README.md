@@ -52,7 +52,7 @@ On Cloud Shell, run the following to ensure dependencies are available:
 sudo apt-get install chromium
 ```
 
-All tests are available in ```source/_tests```.
+All tests are available in ```source/_tests```. A screenshot of each test run is saved to **_build/_testresult.png**.
 
 ## Web Server
 

@@ -52,5 +52,5 @@ npx @11ty/eleventy --serve
 ```
 
 # CSP SHA256 values:
-```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : sha256-Va005WbNsktpaOJr70gHlsLAjIo6WKB01LKuv501how=
+```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : sha256-Qk4ZvBiWsQt5FiAQLxDel0BuLPZWTlucU2kOWgqQq7Y=
 

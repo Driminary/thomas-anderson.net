@@ -6,6 +6,9 @@
   "homepage": "https://github.com/Driminary/thomas-anderson.net#README",
   "jest": {
     "preset": "jest-puppeteer",
+    "launch": {
+        "args": ["--no-sandbox"]
+    },
     "rootDir": "source/_tests",
     "reporters": [
       "default",

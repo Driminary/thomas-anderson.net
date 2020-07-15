@@ -19,7 +19,7 @@ steps:
   # Test Site
   # ====================
   - id: "test"
-    name: "armno/node-chromium"
+    name: "gcr.io/anderson-an9304/node-chromium" # See Dockerfile
     args: ["nvm", "install", "stable", "&&", "npm", "test"]
     waitFor: ["build"]
 artifacts:

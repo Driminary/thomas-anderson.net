@@ -1,3 +1,3 @@
 FROM node
-RUN sudo apt-get update \
-    && sudo apt-get install -y chromium
+RUN apk add --no-cache \
+      chromium \

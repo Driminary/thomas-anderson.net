@@ -20,7 +20,7 @@ steps:
   # ====================
   - id: "test"
     name: "gcr.io/anderson-an9304/node-chromium" # See Dockerfile
-    args: ["nvm", "install", "stable", "&&", "npm", "test"]
+    args: ["npm", "test"]
     waitFor: ["build"]
 artifacts:
   objects:

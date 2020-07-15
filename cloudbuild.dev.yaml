@@ -1,0 +1,27 @@
+steps:
+  # ====================
+  # Install Dependencies
+  # ====================
+  - id: "install-dependencies"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["install", "--no-audit"]
+    waitFor: ["-"] # The "-" indicates that this step begins immediately.
+  # ====================
+  # Build HTML + CSS Files
+  # ====================
+  - id: "build"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["run", "build"]
+    waitFor: ["install-dependencies"]
+  # ====================
+  # Test Site
+  # ====================
+  - id: "test"
+    name: "gcr.io/cloud-builders/npm"
+    args: ["test"]
+    waitFor: ["build"]
+  artifacts:
+    objects:
+      location: 'gs://anderson-an9304-build/$BRANCH_NAME/$SHORT_SHA'
+      paths: ['_build/_testresult*']
+  

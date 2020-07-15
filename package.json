@@ -4,22 +4,28 @@
   "description": "Source code for www.thomas-anderson.net",
   "author": "Thomas Anderson",
   "homepage": "https://github.com/Driminary/thomas-anderson.net#README",
+  "jest": {
+    "preset": "jest-puppeteer",
+    "rootDir": "source/_tests"
+  },
   "scripts": {
     "purge": "rm -Rf ./_build",
     "build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose",
     "build:html": "npx @11ty/eleventy",
     "build:dev": "npm run build:css && npx @11ty/eleventy",
-    "addsha": "echo '{\"commit\":\"$SHORT_SHA\"}' > source/_data/git.json",
-    "build": "npm run addsha && PURGE=yes MINIMISE=yes npm run build:css && npx @11ty/eleventy",
-    "debug": "DEBUG=* npx @11ty/eleventy",
+    "build": "PURGE=yes MINIMISE=yes npm run build:css && npx @11ty/eleventy",
+    "test":"npx jest --verbose",
     "start": "npx @11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
+    "jest": "^26.1.0",
+    "jest-puppeteer": "^4.4.0",
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
+    "puppeteer": "^5.1.0",
     "tailwindcss": "^1.4.6"
   }
 }

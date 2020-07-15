@@ -42,7 +42,19 @@ To build the CSS (**with** purge and minimise):
 PURGE=true MINIMISE=true npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose
 ```
 
-## Test Server
+## Testing
+
+We use Puppeteer, Jest and jest-puppeteer to run tests in headless chromium.
+
+On Cloud Shell, run the following to ensure dependencies are available:
+
+```
+sudo apt-get install chromium
+```
+
+All tests are available in ```source/_tests```.
+
+## Web Server
 
 First, build the full TailwindCSS bundle.css without purging to ensure all tailwind classes are available to us. (See above CSS build).
 
@@ -51,6 +63,6 @@ To serve the _build folder and watch it for liquid and HTML changes:
 npx @11ty/eleventy --serve
 ```
 
-# CSP SHA256 values:
+## CSP SHA256 values:
 ```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : sha256-Qk4ZvBiWsQt5FiAQLxDel0BuLPZWTlucU2kOWgqQq7Y=
 

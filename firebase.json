@@ -4,7 +4,8 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "_testresult.png"
     ],
   "headers": [ {
     "source": "**/*.@(eot|otf|ttf|ttc|woff|css2)",

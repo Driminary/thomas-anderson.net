@@ -20,7 +20,8 @@ steps:
   # ====================
   - id: "test"
     name: "gcr.io/anderson-an9304/node-chromium" # See Dockerfile
-    args: ["npm", "test"]
+    entrypoint: npm
+    args: ["test"]
     waitFor: ["build"]
 artifacts:
   objects:

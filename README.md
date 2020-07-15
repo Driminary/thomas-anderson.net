@@ -5,9 +5,13 @@ eleventy config file: **```.eleventy.js```**
 Source folder : **```source```**
 Output folder : **```_build```**
 
-To install:
+To build, test and deploy:
 ```
+apt-get -y install chromium
 npm install
+npm run build
+npm run test
+firebase deploy
 ```
 
 ## HTML Build

@@ -5,7 +5,7 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "_testresult.png"
+      "_testresult.*"
     ],
   "headers": [ {
     "source": "**/*.@(eot|otf|ttf|ttc|woff|css2)",
@@ -14,10 +14,10 @@
       "value": "*"
     } ]
   }, {
-    "source": "**/*.@(jpg|jpeg|gif|png|ico|css)",
+    "source": "**/*.@(jpg|jpeg|gif|png|ico|css|css2)",
     "headers": [ {
       "key": "Cache-Control",
-      "value": "max-age=86400"
+      "value": "max-age=604800"
     } ]
   }, {
     "source": "404.html",

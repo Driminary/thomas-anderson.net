@@ -20,8 +20,7 @@ steps:
   # ====================
   - id: "test"
     name: "armno/node-chromium"
-    entrypoint: npm
-    args: ["test"]
+    args: ["nvm", "install", "stable", "&&", "npm", "test"]
     waitFor: ["build"]
 artifacts:
   objects:

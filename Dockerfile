@@ -15,9 +15,9 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 # Add user so we don't need --no-sandbox.
 RUN addgroup -S tempuser && adduser -S -g tempuser tempuser \
-    && mkdir -p /home/tempuser/Downloads /app \
+    && mkdir -p /home/tempuser/Downloads /workspace \
     && chown -R tempuser:tempuser /home/tempuser \
-    && chown -R tempuser:tempuser /app
+    && chown -R tempuser:tempuser /workspace
 
 # Run everything after as non-privileged user.
 USER tempuser

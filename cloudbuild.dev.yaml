@@ -19,7 +19,7 @@ steps:
   # Test Site
   # ====================
   - id: "test"
-    name: node
+    name: "armno/node-chromium"
     entrypoint: npm
     args: ["test"]
     waitFor: ["build"]

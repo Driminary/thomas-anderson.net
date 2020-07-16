@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Move Code
-        uses: actions/checkout@v1
+      - name: Grab Code
+        uses: actions/checkout@v2
       - name: Configure Node
         uses: actions/setup-node@v2.1.0
       - name: Install Dependencies

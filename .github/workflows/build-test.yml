@@ -1,0 +1,21 @@
+name: Build and Test
+  
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move Code
+        uses: actions/checkout@v1
+      - name: Configure Node
+        uses: actions/setup-node@v2.1.0
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Website
+        run: npm run build
+      - name: Test
+        run: npm test

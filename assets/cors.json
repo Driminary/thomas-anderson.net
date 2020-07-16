@@ -1,8 +1,0 @@
-[
-    {
-      "origin": ["https://*-dot-devshell.appspot.com","https://*.thomas-anderson.net"],
-      "responseHeader": ["*"],
-      "method": ["GET"],
-      "maxAgeSeconds": 3600
-    }
-]

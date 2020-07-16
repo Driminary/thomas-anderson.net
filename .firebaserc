@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "anderson-an9304"
+  },
+  "targets": {
+    "anderson-an9304": {
+      "hosting": {
+        "production": [
+          "anderson-an9304"
+        ],
+        "staging": [
+          "staging-anderson-an9304"
+        ]
+      }
+    }
+  }
+}

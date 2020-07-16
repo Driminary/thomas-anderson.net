@@ -77,3 +77,24 @@ To build the custom Docker image used to install Chromium + Puppeteer, run:
 ```
 gcloud builds submit --tag eu.gcr.io/anderson-an9304/node-chromium --gcs-source-staging-dir=gs://anderson-an9304-dockerstaging/source
 ```
+
+## Deploy (Firebase)
+
+We use Firebase hosting for our site. First, add and configure your sites in Firebase. To use multiple sites in the same project, configure deploy targets:
+
+```
+firebase target:apply hosting production anderson-an9304
+firebase target:apply hosting staging staging-anderson-an9304
+```
+
+Then to deploy to staging:
+
+```
+firebase deploy --only hosting:staging
+```
+
+And production:
+
+```
+firebase deploy --only hosting:production
+```

@@ -2,7 +2,9 @@ name: Website CI
   
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - staging
 
 jobs:
   build-test:

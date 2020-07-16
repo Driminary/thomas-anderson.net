@@ -1,8 +1,8 @@
-name: Website CD (Staging)
+name: Website CD (Production)
   
 on:
   push:
-    branches: [ staging ]
+    branches: [ master ]
 
 jobs:
   build-test:

@@ -1,0 +1,22 @@
+name: Website CI
+  
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Grab Code
+        uses: actions/checkout@v2
+      - name: Configure Node
+        uses: actions/setup-node@v2.1.0
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Website
+        run: npm run build
+      - name: Test
+        run: npm test

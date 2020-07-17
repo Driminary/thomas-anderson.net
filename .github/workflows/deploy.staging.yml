@@ -28,12 +28,12 @@ jobs:
       - name: Save test results (HTML)
         uses: actions/upload-artifact@v1
         with:
-          name: test-result
+          name: test-result.html
           path: _build/_testresult.html
       - name: Save test results (png)
         uses: actions/upload-artifact@v1
         with:
-          name: test-result
+          name: test-result.png
           path: _build/_testresult.png
         
   deploy:

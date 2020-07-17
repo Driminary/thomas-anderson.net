@@ -5,8 +5,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "_testresult.*"
+      "**/node_modules/**"
     ],
   "headers": [ {
     "source": "**/*.@(eot|otf|ttf|ttc|woff|css2)",
@@ -43,8 +42,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "_testresult.*"
+      "**/node_modules/**"
     ],
   "headers": [ {
     "source": "**/*.@(eot|otf|ttf|ttc|woff|css2)",

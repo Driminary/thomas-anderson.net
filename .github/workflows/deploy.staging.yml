@@ -21,19 +21,19 @@ jobs:
       - name: Test
         run: npm test
       - name: Save _build
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: _build
           path: _build
       - name: Save test results (HTML)
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          name: test-result
+          name: test-result.html
           path: _build/_testresult.html
       - name: Save test results (png)
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          name: test-result
+          name: test-result.png
           path: _build/_testresult.png
         
   deploy:

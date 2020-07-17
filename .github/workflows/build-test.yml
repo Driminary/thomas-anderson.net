@@ -1,10 +1,8 @@
 name: Website CI
   
 on:
-  push:
-    branches: 
-      - master
-      - staging
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build-test:
@@ -22,3 +20,13 @@ jobs:
         run: npm run build
       - name: Test
         run: npm test
+      - name: Save test results (HTML)
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-result.html
+          path: _build/_testresult.html
+      - name: Save test results (png)
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-result.png
+          path: _build/_testresult.png

@@ -15,7 +15,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="preconnect" href="https://kit-free.fontawesome.com/" crossorigin>
 
-    <!-- Font Awesome -->
+    <!-- Google Fonts (Improved performance from https://csswizardry.com/2020/05/the-fastest-google-fonts/) -->
+    <link rel="preload" as="style" 
+          href="https://fonts.googleapis.com/css2?family=Raleway{% if additional_gfonts != blank %}&family={{ additional_gfonts }}{% endif %}&display=fallback" />
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Raleway{% if additional_gfonts != blank %}&family={{ additional_gfonts }}{% endif %}&display=fallback"
+          media="print" onload="this.media='all'" />
+    <noscript>
+    <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Raleway{% if additional_gfonts != blank %}&family={{ additional_gfonts }}{% endif %}&display=fallback" />
+    </noscript>
+
+    <!-- Font Awesome (With defer for performance) -->
     <script defer src="https://kit.fontawesome.com/37747d6ece.js" crossorigin="anonymous"></script>
 
     <!-- Custom CSS -->

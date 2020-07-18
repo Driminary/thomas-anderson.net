@@ -3,6 +3,7 @@ name: Website CD (Staging)
 on:
   push:
     branches: [ staging ]
+    paths: 'source/**'
 
 jobs:
   build-test:

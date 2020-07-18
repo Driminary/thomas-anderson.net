@@ -21,7 +21,7 @@ h5 {
 }
 
 h6 {
-  @apply text-lg; 
+  @apply text-lg;
 }
 
 @tailwind components;

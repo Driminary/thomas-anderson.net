@@ -68,21 +68,9 @@ npx @11ty/eleventy --serve
 ```
 
 ## CSP SHA256 values:
-```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : sha256-Qk4ZvBiWsQt5FiAQLxDel0BuLPZWTlucU2kOWgqQq7Y=
-
-## Docker Builds
-
-To build the custom Docker image used to install Chromium + Puppeteer, from within the ```containers/node-chromium``` folder, run:
-
-```
-gcloud builds submit --tag eu.gcr.io/anderson-an9304/node-chromium --gcs-source-staging-dir=gs://anderson-an9304-dockerstaging/source
-```
-
-To build the custom firebase image used to deploy sites, from within the ```containers/node-chromium``` folder, run:
-
-```
-gcloud builds submit --tag eu.gcr.io/anderson-an9304/firebase --gcs-source-staging-dir=gs://anderson-an9304-dockerstaging/source
-```
+```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : ```sha256-Qk4ZvBiWsQt5FiAQLxDel0BuLPZWTlucU2kOWgqQq7Y=```
+```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc='```
+```(Test result page inline CSS)``` : ```sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=```
 
 ## Deploy (Firebase)
 

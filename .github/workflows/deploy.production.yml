@@ -1,7 +1,7 @@
 name: Website CD (Production)
-  
+
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
   push:
     branches: [ master ]
     paths: 'source/**'
@@ -37,7 +37,7 @@ jobs:
         with:
           name: test-result.png
           path: _build/_testresult.png
-        
+
   deploy:
     name: Deploy
     needs: build-test

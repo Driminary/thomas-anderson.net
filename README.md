@@ -1,6 +1,6 @@
 # Source code for www.Thomas-Anderson.net
 
-![Build + Test](https://github.com/Driminary/thomas-anderson.net/workflows/Website%20CI/badge.svg)
+![Build and Test](https://github.com/Driminary/thomas-anderson.net/workflows/Build%20and%20Test/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/da73e8a2/thomas-anderson.net)
 

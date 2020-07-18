@@ -1,6 +1,9 @@
 # 11ty-based Thomas-Anderson.net
 
-eleventy config file: **```.eleventy.js```**
+## Architecture
+
+![Architecture](https://i.ibb.co/QQ1s2Fx/thomas-anderson-net-architecture.png)
+*(Click image to view full size. Made with [Excalidraw](https://excalidraw.com) - raw file: **architecture.excalidraw**)*
 
 Source folder : **```source```**
 Output folder : **```_build```**

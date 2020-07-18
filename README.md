@@ -69,7 +69,7 @@ npx @11ty/eleventy --serve
 
 ## CSP SHA256 values:
 ```var galite = galite || {}; galite.UA = 'UA-85751744-1';``` : ```sha256-Qk4ZvBiWsQt5FiAQLxDel0BuLPZWTlucU2kOWgqQq7Y=```
-```this.media='all'``` : ```sha256-2qUyh/d58z6VCmsvr9itNSpXa88veBqZpihTX0MtY+s=```
+```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=```
 ```(Test result page inline CSS)``` : ```sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=```
 
 ## Deploy (Firebase)

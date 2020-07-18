@@ -38,7 +38,6 @@ When set, ```PURGE``` will look through any .html and .liquid files in /source/ 
 
 When set, ```MINIMISE``` enables the cssnano PostCSS plugin to minify the resulting ```bundle.css``` file.
 
-
 To build the CSS (**without** purge and minimise):
 ```bash
 npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose

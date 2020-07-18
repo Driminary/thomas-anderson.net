@@ -3,7 +3,9 @@ name: Website CI
 on:
   workflow_dispatch:
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - staging
 
 jobs:
   build-test:

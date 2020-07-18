@@ -1,4 +1,4 @@
-# 11ty-based Thomas-Anderson.net
+# Source code for www.Thomas-Anderson.net
 
 ## Architecture
 

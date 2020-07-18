@@ -38,7 +38,7 @@ h6 {
 }
 
 .text-raleway {
-    font-family: 'Raleway';
+    font-family: 'Raleway', Arial, sans-serif;
 }
 
 /* Google Logo Colour Override (via https://stackoverflow.com/questions/52578726/fontawesome-5-multi-color-icon) */

@@ -1,8 +1,10 @@
 name: Website CD (Staging)
   
-on:
+on: 
+  workflow_dispatch: 
   push:
     branches: [ staging ]
+    paths: 'source/**'
 
 jobs:
   build-test:

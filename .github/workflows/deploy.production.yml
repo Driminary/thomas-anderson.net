@@ -1,8 +1,10 @@
 name: Website CD (Production)
   
 on:
+  workflow_dispatch: 
   push:
     branches: [ master ]
+    paths: 'source/**'
 
 jobs:
   build-test:

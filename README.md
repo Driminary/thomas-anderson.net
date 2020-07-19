@@ -75,7 +75,7 @@ npx @11ty/eleventy --serve
 
 ## CSP SHA256 values
 
-```sha256-MSeStrpNT92zCz2DNqlOluE8kDM/X3ho5XiRjDvHen0=``` :
+```sha256-JsRL36rgIjQ1F+HI/2I0qTCgNGIKxeSv0ox5Yk0mj80=``` :
 
 ```javascript
     window.dataLayer = window.dataLayer || [];

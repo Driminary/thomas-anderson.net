@@ -32,7 +32,7 @@
      {"key": "X-Content-Type-Options", "value": "nosniff"},
      {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
      {"key": "X-XSS-Protection", "value": "1; mode=block"},
-     {"key": "Content-Security-Policy", "value": "style-src 'self' 'sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=' https://fonts.googleapis.com https://*.fontawesome.com; script-src 'self' 'unsafe-hashes' 'sha256-A4D/IJ6HkmCVqDJRsYbS9kMztBcfxxdBMDv76PPJbuM=' 'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=' https://www.googletagmanager.com https://kit.fontawesome.com"}
+     {"key": "Content-Security-Policy", "value": "style-src 'self' 'sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=' https://fonts.googleapis.com https://*.fontawesome.com; script-src 'self' 'unsafe-hashes' 'sha256-ZLONgpJG63xIUVE2OqIQdKInqN5p76YhZMCa1k975Hs=' 'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=' https://cdn.jsdelivr.net https://kit.fontawesome.com"}
    ]
  }]
   },
@@ -69,7 +69,7 @@
      {"key": "X-Content-Type-Options", "value": "nosniff"},
      {"key": "X-Frame-Options", "value": "SAMEORIGIN"},
      {"key": "X-XSS-Protection", "value": "1; mode=block"},
-     {"key": "Content-Security-Policy", "value": "style-src 'self' 'sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=' https://fonts.googleapis.com https://*.fontawesome.com; script-src 'self' 'unsafe-hashes' 'sha256-A4D/IJ6HkmCVqDJRsYbS9kMztBcfxxdBMDv76PPJbuM=' 'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=' https://www.googletagmanager.com https://kit.fontawesome.com"}
+     {"key": "Content-Security-Policy", "value": "style-src 'self' 'sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=' https://fonts.googleapis.com https://*.fontawesome.com; script-src 'self' 'unsafe-hashes' 'sha256-ZLONgpJG63xIUVE2OqIQdKInqN5p76YhZMCa1k975Hs=' 'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=' https://cdn.jsdelivr.net https://kit.fontawesome.com"}
    ]
  }]
   }]

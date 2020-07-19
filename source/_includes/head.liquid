@@ -10,6 +10,7 @@
     <!-- Preconnect to Google Fonts and Font Awesome to improve performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="preconnect" href="https://kit-free.fontawesome.com/" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
 
     <!-- Google Fonts (Improved performance from https://csswizardry.com/2020/05/the-fastest-google-fonts/) -->
     <link rel="preload" as="style" 
@@ -25,14 +26,15 @@
     <!-- Font Awesome (With defer for performance) -->
     <script defer src="https://kit.fontawesome.com/37747d6ece.js" crossorigin="anonymous"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMXDEQWMJW"></script>
+    <!-- Google Analytics - Using ga-lite (https://github.com/jehna/ga-lite) -->
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
 
-    gtag('config', 'G-HMXDEQWMJW');
+    galite('create', 'G-HMXDEQWMJW', 'auto');
+    galite('send', 'pageview');
     </script>
 
     <!-- Custom CSS -->

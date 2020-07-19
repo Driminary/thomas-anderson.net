@@ -75,7 +75,7 @@ npx @11ty/eleventy --serve
 
 ## CSP SHA256 values
 
-```sha256-ZLONgpJG63xIUVE2OqIQdKInqN5p76YhZMCa1k975Hs=``` :
+```sha256-A4D/IJ6HkmCVqDJRsYbS9kMztBcfxxdBMDv76PPJbuM=``` :
 
 ```javascript
     (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}

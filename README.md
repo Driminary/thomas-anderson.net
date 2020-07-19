@@ -75,16 +75,14 @@ npx @11ty/eleventy --serve
 
 ## CSP SHA256 values
 
-```sha256-A4D/IJ6HkmCVqDJRsYbS9kMztBcfxxdBMDv76PPJbuM=``` :
+```sha256-JsRL36rgIjQ1F+HI/2I0qTCgNGIKxeSv0ox5Yk0mj80=``` :
 
 ```javascript
-    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-    ;c.parentNode.insertBefore(a,c)
-    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    galite('create', 'G-HMXDEQWMJW', 'auto');
-    galite('send', 'pageview');
+    gtag('config', 'G-HMXDEQWMJW');
 ```
 
 ```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=```

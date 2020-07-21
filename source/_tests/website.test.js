@@ -9,7 +9,7 @@ describe('Functional', () => {
   });
 
   it('Contains H1 with "Hi."', async () => {
-    await expect(page).toMatchElement('h1', { text: 'Hi.' })
+    await expect(page).toMatchElement('p', { text: 'Hi.' })
   });
 
   it('Contains image of me', async () => {

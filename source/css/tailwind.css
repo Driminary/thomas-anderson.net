@@ -1,5 +1,13 @@
 @tailwind base;
 
+body {
+    min-width: 300px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
 h1 {
   @apply text-5xl;
 }

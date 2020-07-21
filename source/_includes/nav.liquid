@@ -1,12 +1,10 @@
 <!-- Navigation -->
-<nav class="absolute top-0 w-screen text-gray-200 font-medium bg-none">
-    <div class="w-full mx-auto sm:max-w-screen-xl text-right">
-    <ul class="p-1 md:p-2 m-3 mr-5 shadow-inner rounded-lg float-right bg-gray-900 bg-opacity-50 border border-gray-800">
+<nav class="absolute top-0 left-0 right-0 w-screen mx-auto sm:max-w-screen-xl bg-none text-gray-200 font-medium text-right">
+    <ul class="p-1 sm:p-2 m-3 mr-5 shadow-inner rounded-lg float-right bg-gray-900 bg-opacity-50 border border-gray-800">
         {%- for p in collections.all %}
         <li class="inline-block align-middle px-2">
             <a class="hover:underline{% if page.url == p.url %} font-semibold {% endif %}" href="{{ p.url }}">{{ p.data.title }}</a>
         </li>
         {%- endfor %}
     </ul>
-    </div>
 </nav>

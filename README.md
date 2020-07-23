@@ -3,6 +3,8 @@
 ![Build and Test](https://github.com/Driminary/thomas-anderson.net/workflows/Build%20and%20Test/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/da73e8a2/thomas-anderson.net)
+[![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
+[![Firebase hosting](https://img.shields.io/badge/Firebase%20Hosting-%E2%9C%93-brightgreen?logo=firebase)](https://firebase.google.com/products/hosting)
 
 ## Architecture
 
@@ -12,7 +14,7 @@
 Source folder : **```source```**
 Output folder : **```_build```**
 
-To build, test and deploy:
+To build, test and deploy (on debian based systems):
 ```bash
 apt-get -y install chromium
 npm install
@@ -28,6 +30,11 @@ For HTML, we use Liquid templates and [eleventy](https:/11ty.io). We also manual
 To build the HTML:
 ```bash
 npx @11ty/eleventy
+```
+
+To watch for file changes:
+```bash
+npx @11ty/eleventy --serve
 ```
 
 ## CSS Build
@@ -56,24 +63,22 @@ PURGE=true MINIMISE=true npx postcss source/css/tailwind.css -o source/css/bundl
 
 We use Puppeteer, Jest and jest-puppeteer to run tests in headless chromium.
 
-On Cloud Shell, run the following to ensure dependencies are available:
+On Debian-based systems, run the following to ensure dependencies are available:
 
 ```bash
 sudo apt-get install chromium
 ```
 
-All tests are available in ```source/_tests```. A screenshot of each test run is saved to **_build/_testresult.png**.
+All tests are available in ```source/_tests```. A screenshot of each test run is saved to **_build/_testresult.png** and a report is saved to **_build/_testresult.html**.
 
-## Web Server
-
-First, build the full TailwindCSS bundle.css without purging to ensure all tailwind classes are available to us. (See above CSS build).
-
-To serve the _build folder and watch it for liquid and HTML changes:
+To run Jest tests:
 ```bash
-npx @11ty/eleventy --serve
+npx jest --verbose
 ```
 
 ## CSP SHA256 values
+
+We apply CSP headeers in Firebase for added security. For reference, there are parts of the code that are currently inline (insecurely!) so we've added SHA-based exceptions for these as follows: 
 
 ```sha256-JsRL36rgIjQ1F+HI/2I0qTCgNGIKxeSv0ox5Yk0mj80=``` :
 
@@ -91,7 +96,20 @@ npx @11ty/eleventy --serve
 
 ## Deploy (Firebase)
 
-We use Firebase hosting for our site. First, add and configure your sites in Firebase. To use multiple sites in the same project, configure deploy targets:
+We use [Firebase hosting](https://firebase.google.com/docs/hosting/quickstart) for our site. First, [install the firebase-cli](https://firebase.google.com/docs/cli#install_the_firebase_cli) and run:
+
+```bash
+firebase init
+```
+
+Then once configured, run:
+```bash
+firebase deploy
+```
+
+### Multiple site deployment
+
+To use multiple sites in the same project, configure deploy targets:
 
 ```bash
 firebase target:apply hosting production anderson-an9304

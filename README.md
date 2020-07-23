@@ -6,6 +6,11 @@
 [![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
 [![Firebase hosting](https://img.shields.io/badge/Firebase%20Hosting-%E2%9C%93-brightgreen?logo=firebase)](https://firebase.google.com/products/hosting)
 
+> This repo contains the end-to-end source code for www.thomas-anderson.net and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
+
+> If you do end up using this for any commercial purpose, or found the code useful please consider buying me a coffee:
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-orange?logo=Buy%20Me%20A%20Coffee&logoColor=white)](https://www.buymeacoffee.com/ndsn)
+
 ## Architecture
 
 ![Architecture](https://i.ibb.co/QQ1s2Fx/thomas-anderson-net-architecture.png)
@@ -14,13 +19,18 @@
 Source folder : **```source```**
 Output folder : **```_build```**
 
-To build, test and deploy (on debian based systems):
+To build, test and deploy:
 ```bash
-apt-get -y install chromium
 npm install
 npm run build
 npm run test
 firebase deploy
+```
+
+Please note, for jest-puppeteer automated testing, you will need a browser installed on your environment. For Debian-based systems, (I use [Google Cloud Shell](https://cloud.google.com/shell)) I would suggest installing Chromium:
+
+```bash
+sudo apt-get install chromium
 ```
 
 ## HTML Build
@@ -76,24 +86,6 @@ To run Jest tests:
 npx jest --verbose
 ```
 
-## CSP SHA256 values
-
-We apply CSP headeers in Firebase for added security. For reference, there are parts of the code that are currently inline (insecurely!) so we've added SHA-based exceptions for these as follows: 
-
-```sha256-JsRL36rgIjQ1F+HI/2I0qTCgNGIKxeSv0ox5Yk0mj80=``` :
-
-```javascript
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-HMXDEQWMJW');
-```
-
-```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=```
-
-```(Test result page inline CSS)``` : ```sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=```
-
 ## Deploy (Firebase)
 
 We use [Firebase hosting](https://firebase.google.com/docs/hosting/quickstart) for our site. First, [install the firebase-cli](https://firebase.google.com/docs/cli#install_the_firebase_cli) and run:
@@ -112,8 +104,8 @@ firebase deploy
 To use multiple sites in the same project, configure deploy targets:
 
 ```bash
-firebase target:apply hosting production anderson-an9304
-firebase target:apply hosting staging staging-anderson-an9304
+firebase target:apply hosting production production-firebase-sitename
+firebase target:apply hosting staging staging-firebase-sitename
 ```
 
 Then to deploy to staging:
@@ -127,3 +119,21 @@ And production:
 ```bash
 firebase deploy --only hosting:production
 ```
+
+### CSP SHA256 values
+
+We apply CSP headeers in Firebase for added security. For reference, there are parts of the code that are currently inline (insecurely!) so we've added SHA-based exceptions for these as follows: 
+
+```sha256-JsRL36rgIjQ1F+HI/2I0qTCgNGIKxeSv0ox5Yk0mj80=``` :
+
+```javascript
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HMXDEQWMJW');
+```
+
+```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=```
+
+```(Test result page inline CSS)``` : ```sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=```

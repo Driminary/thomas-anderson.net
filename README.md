@@ -124,7 +124,7 @@ firebase deploy --only hosting:production
 
 We apply CSP headeers in Firebase for added security. For reference, there are parts of the code that are currently inline (insecurely!) so we've added SHA-based exceptions for these as follows: 
 
-```sha256-LxJKcxYic1x7VG/D2VO/qPrGaCJDdfyj6BT7oYqjjZs=``` :
+```sha256-IP+wNiH6Ug3YNUEK0vFc4m1mVGy3dlDzEDN73m9Vtw4=``` :
 
 ```javascript
     (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}

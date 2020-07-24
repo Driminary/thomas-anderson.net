@@ -30,3 +30,14 @@
     <!-- Copyright -->
     <div class="text-xs text-gray-200 text-left m-1 ml-2">&copy; 2020 Thomas Anderson</div>
 </footer>
+
+<!-- Google Analytics (Using ga-lite: https://github.com/jehna/ga-lite) -->
+<script>
+    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
+    galite('create', 'UA-85751744-1', 'auto');
+    galite('send', 'pageview');
+</script>

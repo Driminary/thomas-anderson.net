@@ -22,19 +22,20 @@
   },
   "scripts": {
     "purge": "rm -Rf ./_build",
-    "build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose",
     "build:html": "npx @11ty/eleventy",
-    "build:html:serve": "npx @11ty/eleventy --serve",
-    "build:dev": "npm run build:css && npx @11ty/eleventy",
-    "build": "PURGE=yes MINIMISE=yes npm run build:css && npx @11ty/eleventy",
-    "test:jest": "npx jest --verbose",
-    "test": "start-server-and-test serve:silent http://localhost:8080 test:jest",
-    "serve": "http-server _build",
-    "serve:silent": "http-server _build -s"
+    "build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose",
+    "dev:build:html": "npx @11ty/eleventy --serve --quiet",
+    "dev:build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose --watch",
+    "dev": "concurrently 'npm:dev:build:*'",
+    "build": "PURGE=yes MINIMISE=yes npm run build:css && npm run build:html",
+    "jest": "npx jest --verbose",
+    "test": "start-server-and-test serve http://localhost:8080 jest",
+    "serve": "http-server _build -s"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "autoprefixer": "^9.8.5",
+    "concurrently": "^5.2.0",
     "cssnano": "^4.1.10",
     "http-server": "^0.12.3",
     "jest": "^26.1.0",

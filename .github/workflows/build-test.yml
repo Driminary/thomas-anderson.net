@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
-      PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
 
     steps:
       - name: Grab Code

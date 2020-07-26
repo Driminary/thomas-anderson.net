@@ -37,6 +37,13 @@ jobs:
         with:
           name: test-result.png
           path: _build/_testresult.png
+      - name: Send to Percy
+        uses: percy/snapshot-action@v0.1.1
+        with:
+          build-directory: "_build"
+          flags: --ignore-files "_testresult*"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   deploy:
     name: Deploy

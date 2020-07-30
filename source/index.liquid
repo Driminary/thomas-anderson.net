@@ -27,7 +27,7 @@ additional_gfonts: Indie+Flower
         <div class="inline-grid grid-cols-3 sm:grid-cols-5 my-5 gap-10">
             <div><a class="bg-gray-800 hover:bg-gray-700 text-white text-5xl rounded shadow pt-1"
                     href="https://github.com/Driminary"><i title="GitHub" class="fab fa-fw fa-github"></i></a></div>
-            <div><a class="bg-black hover:bg-gray-900 text-white text-5xl rounded shadow pt-1"
+            <div><a class="bg-gray-900 hover:bg-gray-800 text-white text-5xl rounded shadow pt-1"
                     href="https://dev.to/ndsn"><i title="DEV" class="fab fa-fw fa-dev"></i></a></div>
             <div><a class="bg-white hover:bg-gray-200 border border-gray-500 border-opacity-50 text-gray-800 text-5xl rounded shadow pt-1"
                     href="https://googlecloudcertified.credential.net/profile/0a0997a4f8b4ce5db4ded3ad1209b1762bac02a8"><i title="Google Cloud Certifications" class="fab fa-fw fa-google"></i></a>
@@ -76,7 +76,19 @@ additional_gfonts: Indie+Flower
                 </div>
             </div>
         </div>
-        <hr class="w-4/5 mx-auto mb-5 border-gray-400 shadow" />
+        <hr class="w-4/5 mx-auto mb-5 border-gray-400 shadow">
+        <h2><a href="https://dev.to/ndsn"><i title="DEV" class="fab fa-fw fa-dev"></i></a>Latest Posts</h2>
+        <ul class="w-4/5 mx-auto grid gap-5 p-5 text-center">
+        {% for item in devtoapi.posts limit:5 %}
+          <li class="border shadow-inner rounded-lg p-3 bg-gray-100 border border-gray-500">
+            <h3 class="underline"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            <p class="font-semibold py-1">{{ item.description }}</p>
+            <p class="text-sm">Categories: <span class="text-gray-700 font-semibold">{{ item.tag_list | join: ', ' }}</span></p>
+            <p class="text-sm italic">Published on {{ item.published_timestamp | date: "%A %e %B %Y at %I:%M%P" }}</p>
+          </li>
+         {% endfor %}
+        </ul>
+        <hr class="w-4/5 mx-auto my-5 border-gray-400 shadow" />
         <p class="text-3xl">Comments? Suggestions? Queries?</p>
         <p class="text-xl">Please use the address below.</p>
         <a class="bg-gray-200 hover:bg-gray-300 font-semibold text-xl text-gray-700 rounded border border-gray-500 inline-block px-4 py-2 my-4 shadow" href="mailto:me@thomas-anderson.net"><i class="fas fa-envelope-open-text mr-2"></i>me@thomas-anderson.net</a>

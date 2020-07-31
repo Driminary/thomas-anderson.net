@@ -14,7 +14,7 @@ describe('Functional', () => {
 
   it('Contains image of me', async () => {
     const imgs = await page.$eval('img', img => img.getAttribute('src'))
-    await expect(imgs).toBe("/img/mesmaller.jpg")
+    await expect(imgs).toBe("/img/me.webp")
   });
 
 });

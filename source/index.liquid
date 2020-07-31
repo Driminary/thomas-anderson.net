@@ -1,7 +1,5 @@
 ---
 layout: base
-title: Home
-date: 2020-01-01
 additional_gfonts: Indie+Flower
 ---
 
@@ -21,8 +19,8 @@ additional_gfonts: Indie+Flower
     </div>
 </header>
 
-<section class="bg-gray-100 border-t border-gray-500">
-    <div class="text-center text-gray-900 border border-b-0 border-gray-500 py-10 px-4 shadow-lg lg:rounded-t-lg sm:max-w-screen-lg mx-auto md:-mt-10 bg-white">
+<section class="bg-white border-t border-gray-500">
+    <div class="text-center text-gray-900 border border-gray-500 shadow-lg md:rounded-lg sm:max-w-screen-md mx-auto md:-mt-24 px-3 py-5 bg-gray-100">
         <h2 class="text-5xl">Some of my work...</h2>
         <div class="inline-grid grid-cols-3 sm:grid-cols-5 my-5 gap-10">
             <div><a class="bg-gray-800 hover:bg-gray-700 text-white text-5xl rounded shadow pt-1"
@@ -38,8 +36,9 @@ additional_gfonts: Indie+Flower
             <div><a class="bg-blue-700 hover:bg-blue-800 text-white text-5xl rounded shadow pt-1"
                     href="https://www.linkedin.com/in/th0masanderson/"><i title="LinkedIn" class="fab fa-fw fa-linkedin"></i></a></div>
         </div>
-        <hr class="w-4/5 mx-auto my-5 border-gray-400 shadow">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-5 text-center">
+    </div>
+    <div class="text-center text-gray-900 my-16 sm:max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-center">
             <div class="p-3">
                 <h3><i class="fas fa-user-tie mr-2"></i>Me</h3>
                 <hr class="my-1">
@@ -76,11 +75,11 @@ additional_gfonts: Indie+Flower
                 </div>
             </div>
         </div>
-        <hr class="w-4/5 mx-auto mb-5 border-gray-400 shadow">
+        <hr class="w-4/5 mx-auto my-16 border-gray-400 shadow">
         <h2><a href="https://dev.to/ndsn"><i title="DEV" class="fab fa-fw fa-dev"></i></a>Latest Posts</h2>
-        <ul class="w-4/5 mx-auto grid gap-5 p-5 text-center">
+        <ul class="grid gap-5 mt-8 mb-16 px-3 text-center">
         {% for item in devtoapi.posts limit:5 %}
-          <li class="border shadow-inner rounded-lg p-3 bg-gray-100 border border-gray-500">
+          <li class="shadow-inner rounded-lg p-3 bg-gray-100 border border-gray-500">
             <h3 class="underline"><a href="{{ item.url }}">{{ item.title }}</a></h3>
             <p class="font-semibold py-1">{{ item.description }}</p>
             <p class="text-sm">Categories: <span class="text-gray-700 font-semibold">{{ item.tag_list | join: ', ' }}</span></p>
@@ -88,10 +87,10 @@ additional_gfonts: Indie+Flower
           </li>
          {% endfor %}
         </ul>
-        <hr class="w-4/5 mx-auto my-5 border-gray-400 shadow" />
-        <p class="text-3xl">Comments? Suggestions? Queries?</p>
+        <hr class="w-4/5 mx-auto my-16 border-gray-400 shadow" />
+        <p class="p-5 text-3xl">Comments? Suggestions? Queries?</p>
         <p class="text-xl">Please use the address below.</p>
-        <a class="bg-gray-200 hover:bg-gray-300 font-semibold text-xl text-gray-700 rounded border border-gray-500 inline-block px-4 py-2 my-4 shadow" href="mailto:me@thomas-anderson.net"><i class="fas fa-envelope-open-text mr-2"></i>me@thomas-anderson.net</a>
+        <a class="bg-gray-200 hover:bg-gray-300 font-semibold text-xl text-gray-700 rounded border border-gray-500 inline-block px-4 py-2 my-8 shadow" href="mailto:me@thomas-anderson.net"><i class="fas fa-envelope-open-text mr-2"></i>me@thomas-anderson.net</a>
     </div>
 </section>
 

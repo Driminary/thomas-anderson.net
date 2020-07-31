@@ -1,7 +1,7 @@
 describe('Functional', () => {
   beforeAll(async () => {
     await page.goto('http://localhost:8080');
-    await expect(page.title()).resolves.toMatch('Tom Anderson - Home')
+    await expect(page.title()).resolves.toMatch('Tom Anderson')
   });
 
   it('Generate homepage screenshot', async () => {

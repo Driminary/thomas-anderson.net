@@ -37,3 +37,9 @@ jobs:
           flags: --ignore-files "_testresult*"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      - name: Deploy preview to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0.3-alpha
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_TOKEN }}"
+          expires: 7d

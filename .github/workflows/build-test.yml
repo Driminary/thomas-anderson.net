@@ -41,5 +41,5 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0.3-alpha
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANDERSON_AN9304 }}"
           expires: 7d

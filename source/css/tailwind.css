@@ -57,3 +57,7 @@ h6 {
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
+.visibility-auto {
+    content-visibility: auto;
+}

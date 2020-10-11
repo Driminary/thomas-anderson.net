@@ -1,4 +1,4 @@
-# Source code for www.Thomas-Anderson.net
+# Source code for [www.Thomas-Anderson.net](https://www.thomas-anderson.net/?utm_source=github)
 
 ![Build and Test](https://github.com/Driminary/thomas-anderson.net/workflows/Build%20and%20Test/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
@@ -6,7 +6,7 @@
 [![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
 [![Firebase hosting](https://img.shields.io/badge/Firebase%20Hosting-%E2%9C%93-brightgreen?logo=firebase)](https://firebase.google.com/products/hosting)
 
-> This repo contains the end-to-end source code for www.thomas-anderson.net and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
+> This repo contains the end-to-end source code for [www.thomas-anderson.net](https://www.thomas-anderson.net/?utm_source=github) and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
 
 > If you do end up using this for any commercial purpose, or found the code useful please consider buying me a coffee:
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-orange?logo=Buy%20Me%20A%20Coffee&logoColor=white)](https://www.buymeacoffee.com/ndsn)

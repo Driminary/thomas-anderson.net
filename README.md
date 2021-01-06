@@ -13,7 +13,7 @@
 
 ## Architecture
 
-![Architecture](https://i.ibb.co/02wRRjx/Architecture-png.png)
+![Architecture Diagram](https://i.ibb.co/02wRRjx/Architecture-png.png)
 *(Click image to view full size. Made with [Excalidraw](https://excalidraw.com) - raw file: **architecture.excalidraw**)*
 
 Source folder : **```source```**

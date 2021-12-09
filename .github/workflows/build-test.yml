@@ -30,17 +30,3 @@ jobs:
         with:
           name: test-result.png
           path: _build/_testresult.png
-      - name: Send to Percy
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "_build"
-          flags: --ignore-files "_testresult*"
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-      - name: Deploy preview to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0.3-alpha
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANDERSON_AN9304 }}"
-          expires: 7d
-          channelId: staging

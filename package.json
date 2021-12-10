@@ -28,7 +28,7 @@
     "dev:build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose --watch",
     "dev": "concurrently 'npm:dev:build:*'",
     "build": "PURGE=yes MINIMISE=yes npm run build:css && npm run build:html",
-    "jest": "npx jest --verbose",
+    "jest": "npx jest --verbose --runInBand",
     "test": "start-server-and-test serve http://localhost:8080 jest",
     "serve": "http-server _build -s"
   },

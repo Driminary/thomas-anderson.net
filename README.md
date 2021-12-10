@@ -27,10 +27,11 @@ npm run test
 vercel --prod
 ```
 
-Please note, for jest-puppeteer automated testing, you will need a browser installed on your environment. For Debian-based systems, (I use [Google Cloud Shell](https://cloud.google.com/shell)) I would suggest installing Chromium:
+Please note, for jest-puppeteer automated testing, you will need a browser installed on your environment. For Debian-based systems, (I use [Google Cloud Shell](https://cloud.google.com/shell)) I would suggest installing Chromium and it's associated dependencies:
 
 ```bash
 sudo apt-get install chromium
+sudo apt-get install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
 ```
 
 ## HTML Build

@@ -4,7 +4,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/da73e8a2/thomas-anderson.net)
 [![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
-[![Firebase hosting](https://img.shields.io/badge/Firebase%20Hosting-%E2%9C%93-brightgreen?logo=firebase)](https://firebase.google.com/products/hosting)
+[![Hosted on Vercel](https://img.shields.io/badge/Vercel%20Hosting-%E2%9C%93-brightgreen?logo=vercel)](https://vercel.com/)
 
 > This repo contains the end-to-end source code for [www.thomas-anderson.net](https://www.thomas-anderson.net/?utm_source=github) and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
 
@@ -13,7 +13,7 @@
 
 ## Architecture
 
-![Architecture Diagram](https://i.ibb.co/0FT8pxM/architecture.png)
+![Architecture Diagram](https://i.ibb.co/jZRSL2V/architecture.png)
 *(Click image to view full size. Made with [Excalidraw](https://excalidraw.com) - raw file: **architecture.excalidraw**)*
 
 Source folder : **```source```**
@@ -24,7 +24,7 @@ To build, test and deploy:
 npm install
 npm run build
 npm run test
-firebase deploy
+vercel --prod
 ```
 
 Please note, for jest-puppeteer automated testing, you will need a browser installed on your environment. For Debian-based systems, (I use [Google Cloud Shell](https://cloud.google.com/shell)) I would suggest installing Chromium:
@@ -86,56 +86,22 @@ To run Jest tests:
 npx jest --verbose
 ```
 
-## Deploy (Firebase)
+## Deploy (Vercel)
 
-We use [Firebase hosting](https://firebase.google.com/docs/hosting/quickstart) for our site. First, [install the firebase-cli](https://firebase.google.com/docs/cli#install_the_firebase_cli) and run:
+We use [Vercel](https://vercel.com) for our site. First, [install the Vercel CLI](https://vercel.com/cli) and run:
 
 ```bash
-firebase init
+vercel login
 ```
 
 Then once configured, run:
 ```bash
-firebase deploy
+vercel
 ```
+To deploy a preview deployment.
 
-### Multiple site deployment
-
-To use multiple sites in the same project, configure deploy targets:
-
+Then run:
 ```bash
-firebase target:apply hosting production production-firebase-sitename
-firebase target:apply hosting staging staging-firebase-sitename
+vercel --prod
 ```
-
-Then to deploy to staging:
-
-```bash
-firebase deploy --only hosting:staging
-```
-
-And production:
-
-```bash
-firebase deploy --only hosting:production
-```
-
-### CSP SHA256 values
-
-We apply CSP headeers in Firebase for added security. For reference, there are parts of the code that are currently inline (insecurely!) so we've added SHA-based exceptions for these as follows: 
-
-```sha256-BFujVKQYWP4wFGj9bwdFLfPELV6xBQJKW0tubV88DnI=``` :
-
-```javascript
-    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-    ;c.parentNode.insertBefore(a,c)
-    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
-
-    galite('create', 'UA-85751744-1', 'auto');
-    galite('send', 'pageview');
-```
-
-```this.media='all'``` : ```sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc=```
-
-```(Test result page inline CSS)``` : ```sha256-JOzLlPMErmaESDPXojMrIfRz/APutBSoFpHo1zKbbMc=```
+To deploy to production.

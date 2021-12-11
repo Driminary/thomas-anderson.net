@@ -1,9 +1,11 @@
 # Source code for [www.Thomas-Anderson.net](https://www.thomas-anderson.net/?utm_source=github)
 
-![Build and Test](https://github.com/Driminary/thomas-anderson.net/workflows/Build%20and%20Test/badge.svg)
+[![GitHub Checks](https://img.shields.io/github/checks-status/driminary/thomas-anderson.net/master?logo=github)](https://github.com/Driminary/thomas-anderson.net/pulls)
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
 [![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
 [![Hosted on Vercel](https://img.shields.io/badge/Vercel%20Hosting-%E2%9C%93-brightgreen?logo=vercel)](https://vercel.com/)
+[![Vercel Preview Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/preview?label=Preview%20Deployment&logo=vercel)](https://vercel.com/ndsn/thomas-anderson-net/deployments)
+[![Vercel Production Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/production?label=Production%20Deployment&logo=vercel)](https://www.thomas-anderson.net/)
 
 > This repo contains the end-to-end source code for [www.thomas-anderson.net](https://www.thomas-anderson.net/?utm_source=github) and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
 
@@ -77,6 +79,7 @@ On Debian-based systems, run the following to ensure dependencies are available:
 
 ```bash
 sudo apt-get install chromium
+sudo apt-get install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils
 ```
 
 All tests are available in ```source/_tests```. A screenshot of each test run is saved to **_build/_testresult.png** and a report is saved to **_build/_testresult.html**.

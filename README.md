@@ -2,10 +2,12 @@
 
 [![GitHub Checks](https://img.shields.io/github/checks-status/driminary/thomas-anderson.net/master?logo=github)](https://github.com/Driminary/thomas-anderson.net/pulls)
 [![CodeFactor](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/badge/master)](https://www.codefactor.io/repository/github/driminary/thomas-anderson.net/overview/master)
+[![Vercel Preview Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/preview?label=Preview%20Deploy&logo=vercel)](https://vercel.com/ndsn/thomas-anderson-net/deployments)
+[![Vercel Production Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/production?label=Production%20Deploy&logo=vercel)](https://www.thomas-anderson.net/)
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=thomas-anderson.net&logo=gnu-bash&logoColor=orange&up_color=green&up_message=available&url=https%3A%2F%2Fwww.thomas-anderson.net)](https://www.thomas-anderson.net)
+
 [![Built with eleventy](https://img.shields.io/badge/Built%20with%2011ty-%E2%9C%93-brightgreen?logo=eleventy)](https://11ty.dev)
 [![Hosted on Vercel](https://img.shields.io/badge/Vercel%20Hosting-%E2%9C%93-brightgreen?logo=vercel)](https://vercel.com/)
-[![Vercel Preview Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/preview?label=Preview%20Deployment&logo=vercel)](https://vercel.com/ndsn/thomas-anderson-net/deployments)
-[![Vercel Production Deployment](https://img.shields.io/github/deployments/driminary/thomas-anderson.net/production?label=Production%20Deployment&logo=vercel)](https://www.thomas-anderson.net/)
 
 > This repo contains the end-to-end source code for [www.thomas-anderson.net](https://www.thomas-anderson.net/?utm_source=github) and is published entirely free and under the MIT License - Hopefully the code and below description explains the architecture well!
 

@@ -110,3 +110,13 @@ Then run:
 vercel --prod
 ```
 To deploy to production.
+
+## Content Security Policy Headers
+
+To ensure better security, we apply Content-Security-Policy (CSP) headers in Vercel, using the *vercel.json* file as described [here](https://vercel.com/docs/cli#project-configuration/headers). Since we use some inline code (both Javascript and CSS) we need to include the SHA hashes that match the following pieces of code:
+
+`this.media='all'` (Google Fonts load) = `'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc='`
+
+(Inline CSS in test result HTML page) = `'sha256-Vv5TW3/Rmik7SBeZlrkFStK4ozYD3t6SlHE6tlWhW8Y='`
+
+_*Note:* We also fallback to `unsafe-inline` for `script-src` for browsers that don't support hashes._

@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "0.12.1",
-    "autoprefixer": "10.4.0",
+    "autoprefixer": "10.4.8",
     "axios": "0.24.0",
     "concurrently": "6.4.0",
     "cssnano": "5.0.12",

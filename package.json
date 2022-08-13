@@ -33,7 +33,7 @@
     "serve": "http-server _build -s"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy": "1.0.0",
     "autoprefixer": "10.4.8",
     "axios": "0.27.2",
     "concurrently": "6.5.1",

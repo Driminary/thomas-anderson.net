@@ -120,3 +120,4 @@ To ensure better security, we apply Content-Security-Policy (CSP) headers in Ver
 (Inline CSS in test result HTML page) = `'sha256-Vv5TW3/Rmik7SBeZlrkFStK4ozYD3t6SlHE6tlWhW8Y='`
 
 _*Note:* We also fallback to `unsafe-inline` for `script-src` for browsers that don't support hashes._
+

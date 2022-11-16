@@ -2,7 +2,8 @@ pull_request_rules:
   - name: Automatic merge into master if checks pass.
     conditions:
       - base=master
-      - label=automerge
+# Got annoyed with this.
+#      - label=automerge
     actions:
       merge:
         method: merge

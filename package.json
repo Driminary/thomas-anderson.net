@@ -44,7 +44,7 @@
     "jest-puppeteer": "7.0.0",
     "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
-    "puppeteer": "19.6.3",
+    "puppeteer": "19.7.0",
     "start-server-and-test": "1.15.3",
     "tailwindcss": "3.2.4"
   }

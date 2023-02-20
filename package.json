@@ -45,7 +45,7 @@
     "postcss": "8.4.21",
     "postcss-cli": "10.1.0",
     "puppeteer": "19.7.2",
-    "start-server-and-test": "1.15.3",
+    "start-server-and-test": "1.15.4",
     "tailwindcss": "3.2.4"
   }
 }

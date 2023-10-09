@@ -1,6 +1,6 @@
 module.exports = {
   launch: {
-    args: ['--no-sandbox'],
-    headless: "new"
+    dumpio: true,
+    headless: process.env.HEADLESS !== "false" ? "new" : false,
   },
 }

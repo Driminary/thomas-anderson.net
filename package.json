@@ -4,22 +4,6 @@
   "description": "Source code for www.thomas-anderson.net",
   "author": "Thomas Anderson",
   "homepage": "https://github.com/Driminary/thomas-anderson.net#README",
-  "jest": {
-    "preset": "jest-puppeteer",
-    "rootDir": "source/_tests",
-    "reporters": [
-      "default",
-      [
-        "jest-html-reporter",
-        {
-          "pageTitle": "Test Run Report",
-          "outputPath": "_build/_testresult.html",
-          "logo": "_testresult.png",
-          "includeFailureMsg": true
-        }
-      ]
-    ]
-  },
   "scripts": {
     "purge": "rm -Rf ./_build",
     "build:html": "npx @11ty/eleventy",
@@ -28,8 +12,6 @@
     "dev:build:css": "npx postcss source/css/tailwind.css -o source/css/bundle.css --verbose --watch",
     "dev": "concurrently 'npm:dev:build:*'",
     "build": "MINIMISE=yes npm run build:css && npm run build:html",
-    "jest": "npx jest --verbose --runInBand",
-    "test": "start-server-and-test serve http://localhost:8080 jest",
     "serve": "http-server _build -s"
   },
   "dependencies": {
@@ -39,13 +21,8 @@
     "concurrently": "8.2.2",
     "cssnano": "7.0.1",
     "http-server": "14.1.1",
-    "jest": "29.7.0",
-    "jest-html-reporter": "3.10.2",
-    "jest-puppeteer": "10.0.1",
     "postcss": "8.4.38",
     "postcss-cli": "11.0.0",
-    "puppeteer": "21.1.1",
-    "start-server-and-test": "2.0.3",
     "tailwindcss": "3.4.3"
   }
 }
